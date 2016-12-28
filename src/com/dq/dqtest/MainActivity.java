@@ -44,7 +44,7 @@ public class MainActivity extends Activity{
 		content_list.setAdapter(adapter);
 		content_list.setOnItemClickListener(new OnItemClickListener() {
 
-			@Override
+			@Override	
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				switch (position) {
 				case 0:
