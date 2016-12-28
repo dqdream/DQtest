@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#FFFFFF"
+        android:padding="10dp" >
+		<CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/image_demo"
+            android:text="是否彩色" />
+        <Button 
+            android:layout_below="@+id/checkBox1"
+            android:id="@+id/image_pickbtn"
+            android:layout_width="wrap_content"
+            android:text="选择图片"
+            android:layout_height="wrap_content"/>
+        
+        <Button 
+            android:layout_below="@+id/image_pickbtn"
+            android:id="@+id/image_startbtn"
+            android:layout_width="wrap_content"
+            android:text="开始绘制"
+            android:layout_height="wrap_content"/>
+        
+        <ImageView
+            android:layout_toRightOf="@+id/image_pickbtn"
+            android:layout_centerInParent="true"
+            android:id="@+id/image_demo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@android:color/black" />
+
+    <com.dq.drawview.HandDrawView
+        android:id="@+id/outline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

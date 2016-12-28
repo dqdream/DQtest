@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+<meta name="viewport"
+	content="width=device-width, minimum-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet"
+	href="css/themes/default/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<script type="text/javascript">
+	function refreshList(list) {
+		/* $('#main_lv').empty(); */
+		for (var i = 0; i < list.length; i++) {
+			$('#main_lv').append("<li>" + list[i] + "</li>");
+		}
+		$('#main_lv').listview('refresh');
+		alert("加载完成" + $('#main_lv li').length);
+
+		htmlToAndroid();
+	}
+	function androidToHtml(list) {
+		for (var i = 0; i < list.length; i++) {
+			$('#main_lv').append("<li>" + ("android" + list[i]) + "</li>");
+		}
+		$('#main_lv').listview('refresh');
+		alert("success");
+	}
+	function htmlToAndroid() {
+		JsInterface.callAndroidMethod($('#main_lv li').text())
+	}
+</script>
+
+<body>
+
+	<div data-role="header">
+		<h1>标题</h1>
+		<a data-icon="carat-l" data-iconpos="notext" data-role="button">Back</a>
+		<a onclick="refreshList([0,1,2,3,4,5,6])" data-icon="back"
+			data-iconpos="notext" data-role="button">Refresh</a>
+	</div>
+
+	<div role="main" class="ui-content">
+		<ul data-role="listview" id="main_lv">
+		</ul>
+	</div>
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+
+</body>
+</html>

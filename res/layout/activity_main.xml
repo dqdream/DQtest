@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <com.dq.dragview.DragView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:id="@+id/drag_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:text="这里向上拖动" />
+
+        <RelativeLayout
+            android:id="@+id/content_rel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/drag_title_text"
+            android:background="#33CCCC"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/content_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </RelativeLayout>
+    </com.dq.dragview.DragView>
+
+</RelativeLayout>
