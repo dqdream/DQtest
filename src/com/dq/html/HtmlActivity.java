@@ -1,6 +1,6 @@
 package com.dq.html;
 
-import com.zed3.sipua.dqtest.R;
+import com.dq.decode.R;
 
 import android.app.Activity;
 import android.os.Bundle;

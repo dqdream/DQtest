@@ -1,30 +1,25 @@
-package com.dq.dqtest;
+package com.dq.main;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.dq.dqtest.RefreshLayoutView.OnLoadListener;
+import com.dq.decode.R;
 import com.dq.dragview.DragActivity;
 import com.dq.drawview.DrawActivity;
 import com.dq.html.HtmlActivity;
 import com.dq.okhttp.OkHttpTestUtil;
+import com.dq.photoview.PhotoViewActivity;
 import com.dq.retrofit.RetrofitTestUtil;
-import com.zed3.sipua.dqtest.R;
+import com.dq.xyview.XYActivity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class MainActivity extends Activity{
 	private ListView content_list;
@@ -34,11 +29,13 @@ public class MainActivity extends Activity{
 		setContentView(R.layout.main);
 		content_list=(ListView) findViewById(R.id.listview);
 		final List<String>  lists=new ArrayList<String>();
-		lists.add("bottom_dragview底部拖拽");
+		lists.add("bottom_dragview搴曢儴鎷栨嫿");
 		lists.add("okhttptest");
 		lists.add("retrofittest");
-		lists.add("handview自动手绘");
+		lists.add("handview鎵嬬粯");
 		lists.add("htmlactivity");
+		lists.add("photoView");
+		lists.add("鍧愭爣绯籚iew");
 		final ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,
 				android.R.layout.simple_expandable_list_item_1, lists);
 		content_list.setAdapter(adapter);
@@ -61,6 +58,12 @@ public class MainActivity extends Activity{
 					break;
 				case 4:
 					startActivity(new Intent(MainActivity.this, HtmlActivity.class));
+					break;
+				case 5:
+					startActivity(new Intent(MainActivity.this, PhotoViewActivity.class));
+					break;
+				case 6:
+					startActivity(new Intent(MainActivity.this, XYActivity.class));
 					break;
 				}
 				

@@ -1,6 +1,6 @@
 package com.dq.dragview;
 
-import com.zed3.sipua.dqtest.R;
+import com.dq.decode.R;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -47,7 +47,7 @@ import android.widget.Toast;
  * 
  * 3.0
  * 
- * setMakeAnimation 设置�?启动�?
+ * setMakeAnimation 设置�?启动�?
  * 
  * setDragListener  设置监听回调
  * 
@@ -69,7 +69,7 @@ public class DragView extends RelativeLayout implements OnTouchListener, OnClick
 	 */
 	private static final int TOP = 2;
 	
-	private int mCurrentType = HALF;// 当前状�??, 默认值起始状�?
+	private int mCurrentType = HALF;// 当前状�??, 默认值起始状�?
 
 	private TextView drag_title_text;
 	private RelativeLayout content_rel;
@@ -112,7 +112,7 @@ public class DragView extends RelativeLayout implements OnTouchListener, OnClick
 					onBottomLayout();
 					break;
 				case HALF:
-					drag_title_text.setText("向上或�?�向下拖�?");
+					drag_title_text.setText("向上或向下拖动");
 					onHalfLayout();
 					break;
 				case TOP:
@@ -230,7 +230,7 @@ public class DragView extends RelativeLayout implements OnTouchListener, OnClick
 
 	
 	/**
-	 * 滑动的变化状态临界�??
+	 * 滑动的变化状态临界�??
 	 * @return
 	 */
 	private int getChangeHeigth() {
@@ -238,7 +238,7 @@ public class DragView extends RelativeLayout implements OnTouchListener, OnClick
 	}
 
 	/**
-	 * 拖动到顶�? 可以在这里加动画
+	 * 拖动到顶�? 可以在这里加动画
 	 */
 	private void topLayout() {
 		mCurrentType = TOP;
@@ -277,7 +277,7 @@ public class DragView extends RelativeLayout implements OnTouchListener, OnClick
 	}
 
 	private void onHalf() {
-		drag_title_text.setText("向上或�?�向下拖�?");
+		drag_title_text.setText("向上或�?�向下拖�?");
 		Toast.makeText(getContext(), "bing go half", 1000).show();
 		onHalfLayout();
 	}
@@ -316,7 +316,7 @@ public class DragView extends RelativeLayout implements OnTouchListener, OnClick
 	}
 
 	/**
-	 * �?要动画了改这�?
+	 * �?要动画了改这�?
 	 */
 	private void startAnimation() {
 		Animation animation = null;

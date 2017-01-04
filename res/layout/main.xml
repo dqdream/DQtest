@@ -4,16 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.dq.dqtest.RefreshLayoutView
+    <ListView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:id="@+id/refresh"
         android:layout_height="match_parent" >
-
-        <ListView
-            android:id="@+id/listview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-        </ListView>
-    </com.dq.dqtest.RefreshLayoutView>
+    </ListView>
 
 </LinearLayout>

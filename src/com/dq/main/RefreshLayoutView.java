@@ -1,4 +1,4 @@
-package com.dq.dqtest;
+package com.dq.main;
 
 import android.content.Context;
 import android.graphics.Color;

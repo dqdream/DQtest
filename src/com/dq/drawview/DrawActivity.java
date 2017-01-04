@@ -1,7 +1,6 @@
 package com.dq.drawview;
 
-import com.dq.dqtest.MainActivity;
-import com.zed3.sipua.dqtest.R;
+import com.dq.decode.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,7 +16,11 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.Toast;
-
+/**
+ * 手绘
+ * @author dq
+ *
+ */
 public class DrawActivity extends Activity implements OnClickListener {
 	private HandDrawView drawOutlineView;
 	private Bitmap sobelBm;

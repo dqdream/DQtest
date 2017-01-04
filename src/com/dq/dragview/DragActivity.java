@@ -3,7 +3,7 @@ package com.dq.dragview;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.zed3.sipua.dqtest.R;
+import com.dq.decode.R;
 
 import android.app.Activity;
 import android.app.ActivityManager;
